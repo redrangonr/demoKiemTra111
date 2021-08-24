@@ -17,15 +17,15 @@ import java.util.Optional;
 public class CityController {
     @Autowired
     private ICityService cityService;
-    @Autowired
-    private ICountryService countryService;
-    @GetMapping("/list")
-    private ModelAndView showList() {
-        ModelAndView modelAndView = new ModelAndView("/list");
-        modelAndView.addObject("city", cityService.findAll());
-        modelAndView.addObject("counties",countryService.findAll());
-        return modelAndView;
-    }
+//    @Autowired
+//    private ICountryService countryService;
+//    @GetMapping("/list")
+//    private ModelAndView showList() {
+//        ModelAndView modelAndView = new ModelAndView("/list");
+//        modelAndView.addObject("city", cityService.findAll());
+//        modelAndView.addObject("counties",countryService.findAll());
+//        return modelAndView;
+//    }
 
     @GetMapping()
     ResponseEntity<Iterable<City>> findAll() {
